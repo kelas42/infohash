@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <form id="myform">
+        <p>Nama</p>
+        <input type="text" name="Nama"><br>
+        <p>No. Absen</p>
+        <input type="text" name="Absen"><br>
+        <p>NPM</p>
+        <input type="text" name="Npm"><br>
+        <p>Sesi</p>
+        <input type="text" name="Sesi"><br>
+        <p>Mata Kuliah</p>
+            <select name="Matkul">
+                <option value="Bhs Indo">Bahasa Indonesia</option>
+                <option value="Eko Makro">Ekonomi Makro</option>
+                <option value="Hk Perh & Bisnis">Hukum Perusahaan dan Bisnis</option>
+                <option value="IUT">Ilmu Ukur Tanah dan Pemetaan</option>
+                <option value="Mankeu II">Manajemen Keuangan II</option>
+                <option value="Pen Pro Residen">Penilaian Properti Residensial</option>
+                <option value="Tekbang">Teknologi Bangunan</option>
+              </select>
+            <p>Kode Hash</p>
+            <input type="text" name="Kode"><br>
+            <br>
+            <button type="button" onclick="myFunction()">Cek</button>
+        <p>Info Hash</p>
+        <input style="width: 500px;" type="text" name="Hash"><br>
+        <p>Nama File</p>
+        <input style="width: 500px;" type="text" name="File"><br>
+        
+    </form>
+
+        <script>
+            function myFunction() {
+              //alert ("Hello");
+              var a = document.getElementById("myform").elements["Sesi"].value;
+              var b = document.getElementById("myform").elements["Matkul"].value;
+              var c = document.getElementById("myform").elements["Absen"].value;
+              var d = document.getElementById("myform").elements["Nama"].value;
+              var e = document.getElementById("myform").elements["Npm"].value;
+              var g = document.getElementById("myform").elements["Kode"].value;
+
+              var f = "LJU" + "_" + a + "_" + "d3pbbap_4-02" + "_" + b + "_" + c + "_" + d + "_" + e + "_" + g
+              var h = "LJU" + "_" + a + "_" + "d3pbbap_4-02" + "_" + b + "_" + c + "_" + d + "_" + e 
+              document.getElementById("myform").elements["Hash"].value = f
+              document.getElementById("myform").elements["File"].value = h
+              //alert (c);
+            }
+        </script>
+
+</body>
+</html>
